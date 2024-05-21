@@ -5,6 +5,7 @@ export const products = [
     price: 29.99,
     status: "active",
     created_date: "2023-05-21",
+    description: "Pro",
   },
   {
     product_name: "Bluetooth Speaker",
@@ -12,6 +13,7 @@ export const products = [
     price: 49.99,
     status: "active",
     created_date: "2023-06-15",
+    description: "High-quality sound",
   },
   {
     product_name: "Running Shoes",
@@ -19,6 +21,7 @@ export const products = [
     price: 75.0,
     status: "not_active",
     created_date: "2023-01-10",
+    description: "Comfortable and lightweight",
   },
   {
     product_name: "Electric Toothbrush",
@@ -26,6 +29,7 @@ export const products = [
     price: 39.95,
     status: "active",
     created_date: "2023-02-25",
+    description: "Advanced cleaning technology",
   },
   {
     product_name: "Yoga Mat",
@@ -33,6 +37,7 @@ export const products = [
     price: 20.0,
     status: "not_active",
     created_date: "2022-11-30",
+    description: "Eco-friendly material",
   },
   {
     product_name: "Smartphone",
@@ -40,6 +45,7 @@ export const products = [
     price: 699.0,
     status: "active",
     created_date: "2023-03-05",
+    description: "High-performance device",
   },
   {
     product_name: "Laptop",
@@ -47,6 +53,7 @@ export const products = [
     price: 999.99,
     status: "active",
     created_date: "2023-04-10",
+    description: "Powerful processing and sleek design",
   },
   {
     product_name: "Coffee Maker",
@@ -54,6 +61,7 @@ export const products = [
     price: 79.99,
     status: "not_active",
     created_date: "2022-12-20",
+    description: "Makes delicious coffee",
   },
   {
     product_name: "Desk Lamp",
@@ -61,6 +69,7 @@ export const products = [
     price: 24.99,
     status: "active",
     created_date: "2023-07-01",
+    description: "Adjustable brightness",
   },
   {
     product_name: "Water Bottle",
@@ -68,5 +77,6 @@ export const products = [
     price: 15.0,
     status: "active",
     created_date: "2023-08-18",
+    description: "Leak-proof and durable",
   },
 ];

@@ -21,7 +21,7 @@ export const navLinks = [
 
 export const productSubmenu = [
   {
-    name: "New products",
+    name: "Add product",
     path: "/products/newProducts",
     icon: MdCreateNewFolder,
   },
