@@ -3,11 +3,18 @@ import { FiEdit } from "react-icons/fi";
 import { RiDeleteBinLine } from "react-icons/ri";
 import EditProductForm from "../../pages/Product/child/EditProductForm";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const ProductTable = ({ Products }) => {
   const [openEditModal, setOpenEditModal] = useState(false);
   const [dataEdit, setEditData] = useState("");
-  console.log(dataEdit);
+  const handleDelete = (product) => {
+    toast.success(`Product ${product} delete successfully`, {
+      autoClose: 2000,
+      hideProgressBar: true,
+      position: "top-center",
+    });
+  };
   return (
     <>
       <div className="overflow-x-auto">
@@ -88,7 +95,7 @@ const ProductTable = ({ Products }) => {
                         <div
                           className="text-red-700 cursor-pointer bg-red-100 p-2 rounded-md"
                           onClick={() => {
-                            setOpenEditModal(true);
+                            handleDelete(product.product_name);
                           }}
                         >
                           <RiDeleteBinLine size={18} />

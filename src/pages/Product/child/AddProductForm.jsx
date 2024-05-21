@@ -3,8 +3,12 @@ import Input from "../../../compontents/Input";
 import TextArea from "../../../compontents/Input/TextArea";
 import SelectInput from "../../../compontents/Input/Select";
 import { categories } from "../../../constants/categories";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+useNavigate;
 
 const AddProductForm = () => {
+  const navigate = useNavigate();
   const {
     control,
     handleSubmit,
@@ -12,7 +16,12 @@ const AddProductForm = () => {
   } = useForm();
 
   const handleProductSubmit = (data) => {
-    console.log(data);
+    toast.success(`Product ${data.name} Added successfully`, {
+      autoClose: 2000,
+      hideProgressBar: true,
+      position: "top-center",
+    });
+    navigate("/products");
   };
 
   return (
@@ -51,7 +60,6 @@ const AddProductForm = () => {
             name="category"
             control={control}
             defaultValue=""
-            rules={{ required: "Please select a category" }}
             render={({ field }) => (
               <label className="flex flex-col gap-1">
                 <p className="text-[14px]">Category</p>

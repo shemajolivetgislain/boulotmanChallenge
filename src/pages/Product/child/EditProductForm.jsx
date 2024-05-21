@@ -5,6 +5,7 @@ import Input from "../../../compontents/Input";
 import TextArea from "../../../compontents/Input/TextArea";
 import SelectInput from "../../../compontents/Input/Select";
 import { categories } from "../../../constants/categories";
+import { toast } from "react-toastify";
 
 const EditProductForm = ({ closeModal, productData }) => {
   const {
@@ -14,10 +15,14 @@ const EditProductForm = ({ closeModal, productData }) => {
   } = useForm();
 
   const handleProductSubmit = (data) => {
-    console.log(data);
+    toast.success(`Product ${data.name} Edited successfully`, {
+      autoClose: 2000,
+      hideProgressBar: true,
+      position: "top-center",
+    });
+    closeModal();
   };
 
-  console.log(productData);
   return (
     <Modal title={"Edit Product"} toggleFunction={closeModal}>
       <form
@@ -29,7 +34,6 @@ const EditProductForm = ({ closeModal, productData }) => {
           name="name"
           control={control}
           defaultValue={productData?.product_name}
-          rules={{ required: "product name is required" }}
           render={({ field }) => (
             <label className="flex flex-col gap-1">
               <p className="text-[14px]">Product Name</p>
@@ -53,7 +57,6 @@ const EditProductForm = ({ closeModal, productData }) => {
           name="category"
           control={control}
           defaultValue={productData.category}
-          rules={{ required: "Please select a category" }}
           render={({ field }) => (
             <label className="flex flex-col gap-1">
               <p className="text-[14px]">Category</p>
@@ -76,7 +79,6 @@ const EditProductForm = ({ closeModal, productData }) => {
           name="price"
           control={control}
           defaultValue={productData?.price}
-          rules={{ required: "product price is required" }}
           render={({ field }) => (
             <label className="flex flex-col gap-1">
               <p className="text-[14px]">Product Price</p>
