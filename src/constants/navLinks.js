@@ -6,7 +6,7 @@ import { MdCreateNewFolder } from "react-icons/md";
 export const navLinks = [
   {
     name: "Dashboard",
-    path: "/",
+    path: "/dashboard",
     icon: RxDashboard,
     menu: false,
   },

@@ -6,6 +6,7 @@ export default {
       colors: {
         whiteTheme: {
           primaryColor: "#6C8644",
+          subPrimaryColor: "#526B2D",
           secondColor: "#ffffff",
           accentColor: "#FFFAE5",
           accentDark: "#AAA489",
