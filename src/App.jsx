@@ -1,12 +1,16 @@
-import "./App.css";
+import AppRoutes from "./routes";
+import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <>
-      <div className="text-whiteTheme-primaryColor font-bold">
-        <h1>Boulot MAN ENGINEERING</h1>
+    <BrowserRouter>
+      <div className="App w-full">
+        <ToastContainer autoClose={1000} closeOnClick />
+        <AppRoutes />
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 
