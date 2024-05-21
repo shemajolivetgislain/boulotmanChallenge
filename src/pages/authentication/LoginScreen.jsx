@@ -20,7 +20,7 @@ const LoginScreen = () => {
             className="w-[500px] absolute bottom-0 right-0 opacity-50"
           />
         </div>
-        <main className="py-6 px-28  flex flex-col gap-16">
+        <main className="py-4 px-20 flex flex-col gap-16">
           <div className="flex flex-col gap-10 z-[1000]">
             <span>
               <header>
